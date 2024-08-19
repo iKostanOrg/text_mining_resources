@@ -1,4 +1,4 @@
-# Text Mining and Natural Language Processing Resources
+# Uncle Steve's Big List of Text Analytics and NLP Resources
 
 ```
  ____ ____ ____ ____ _________ ____ ____ ____ ____ ____ ____ 
@@ -7,7 +7,7 @@
 |/__\|/__\|/__\|/__\|/_______\|/__\|/__\|/__\|/__\|/__\|/__\|
 ```
 
-A curated list of resources for learning about natural language processing, text mining, text analytics, and unstructured data. [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+A curated list of resources for learning about natural language processing, text analytics, and unstructured data. [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ## Table of Contents
 - [Books](#books)
@@ -33,9 +33,10 @@ A curated list of resources for learning about natural language processing, text
   - [Q&A Systems, Chatbots](#qa-systems)
   - [Fuzzy Matching, Probabilistic Matching, Record Linkage, Etc.](#fuzzy-matching)
   - [Word and Document Embeddings](#word-and-document-embeddings)
+  - [Transformers and Language Models](#transformers-and-language-models)
   - [Deep Learning](#deep-learning)
   - [Knowledge Graphs](#knowledge-graphs)
-- [NLP Conferences](#nlp-conferences)
+- [Major NLP Conferences](#major-nlp-conferences)
 - [Benchmarks](#benchmarks)
 - [Online Courses](#online-courses)
 - [APIs and Libraries](#apis-and-libraries)
@@ -43,7 +44,6 @@ A curated list of resources for learning about natural language processing, text
 - [Online Demos and Tools](#online-demos-and-tools)
 - [Datasets](#datasets)
 - [Misc](#misc)
-- [Meta](#meta)
 - [Other Curated Lists](#other-curated-lists)
 
 ## Books
@@ -54,6 +54,10 @@ A curated list of resources for learning about natural language processing, text
 - [Text Mining in Practice with R](https://www.wiley.com/en-us/Text+Mining+in+Practice+with+R-p-9781119282013)
 
 #### Python
+- [Natural Language Processing with Transformers, Revised Edition](https://transformersbook.com/)
+- [Getting Started with Natural Language Processing](https://www.manning.com/books/getting-started-with-natural-language-processing)
+- [Blueprints for Text Analytics Using Python: Machine Learning-Based Solutions for Common Real World (NLP) Applications](https://www.oreilly.com/library/view/blueprints-for-text/9781492074076/)
+- [Practical Natural Language Processing](https://www.oreilly.com/library/view/practical-natural-language/9781492054047/)
 - [Natural Language Processing with Python](http://www.nltk.org/book/)
 - [Natural Language Processing with PyTorch](http://shop.oreilly.com/product/0636920063445.do)
 - [Python Natural Language Processing](http://shop.oreilly.com/product/9781787121423.do)
@@ -89,11 +93,7 @@ A curated list of resources for learning about natural language processing, text
 - [Sebastian Ruder](http://ruder.io/)
 - [NLP-progress](https://nlpprogress.com/)
 - [Natural Language Processing Blog](https://nlpers.blogspot.com/)
-- [Text Mining, Analytics & More](http://text-analytics101.rxnlp.com/)
-- [FriendlyData blog](https://friendlydata.io/blog)
-- [Salmon Run](http://sujitpal.blogspot.com/)
-- [Lekta Blog](https://lekta.ai/blog/)
-- [NLP News](http://newsletter.ruder.io/)
+
 
 ## Blog Articles, Papers, Case Studies
 
@@ -145,9 +145,10 @@ A curated list of resources for learning about natural language processing, text
 - [Lessons learned building natural language processing systems in health care](https://www.oreilly.com/ideas/lessons-learned-building-natural-language-processing-systems-in-health-care)
 - [How Algorithms Know What You’ll Type Next](https://pudding.cool/2019/04/text-prediction)
 
+
 ### Biases in NLP 
 - [AI bias: It is the responsibility of humans to ensure fairness](https://www.information-age.com/ai-bias-123479217/)
-- [Venturebeat Blogpost - Gender biases in datasets](https://venturebeat.com/2018/09/07/researchers-develop-a-method-that-reduces-gender-bias-in-ai-datasets/) - Based on UCLA research paper "Learning Gender Neutral Word Embeddings" Aug 2018 .
+- [Venturebeat Blogpost - Gender biases in datasets](https://venturebeat.com/2018/09/07/researchers-develop-a-method-that-reduces-gender-bias-in-ai-datasets/) - Based on UCLA research paper "Learning Gender Neutral Word Embeddings" Aug 2018.
 - [Examining Gender and Race Bias in Two Hundred Sentiment Analysis Systems](http://aclweb.org/anthology/S18-2005). 2018
 - [Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings](https://arxiv.org/abs/1607.06520).
 
@@ -346,7 +347,6 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [Word Vectors in Natural Language Processing: Global Vectors (GloVe)](https://www.kdnuggets.com/2018/08/word-vectors-nlp-glove.html). Aug 2018.
 - [Doc2Vec Tutorial on the Lee Dataset](https://github.com/RaRe-Technologies/gensim/blob/develop/docs/notebooks/doc2vec-lee.ipynb)
 - [Word Embeddings in Python with SpaCy and Gensim](https://www.shanelynn.ie/word-embeddings-in-python-with-spaCy-and-gensim/)
-- [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](https://jalammar.github.io/illustrated-bert/). Dec 2018.
 - [Deep Contextualized Word Represenations](https://arxiv.org/abs/1802.05365). ElMo. [PyTorch implementation](https://github.com/allenai/allennlp/blob/master/tutorials/how_to/elmo.md). [TF Implementation](https://github.com/allenai/bilm-tf)
 - [Universal Language Model Fine-tuning for Text Classification](https://arxiv.org/abs/1801.06146). [Implementation code](http://nlp.fast.ai/category/classification.html). 
 - [Supervised Learning of Universal Sentence Representations from Natural Language Inference Data](https://arxiv.org/abs/1705.02364).
@@ -361,12 +361,37 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [ELMo Word embeddings](allennlp.org/elmo)
 - [An Idiot’s Guide to Word2vec Natural Language Processing](https://medium.com/@ODSC/an-idiots-guide-to-word2vec-natural-language-processing-5c3767cf8295)
 - [Get Busy with Word Embeddings- An Introduction (February 2018)](https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/)
-- [BERT Explained - State of the art language model for NLP](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270). A great explaination of the fundamentals of how BERT works.
 - [NLP's ImageNet moment has arrived](http://ruder.io/nlp-imagenet/). July 2018. Overview of pre-trained NLP language models, drawing parallels to ImageNet's contributions to computer vision. 
 - [Word2vec: fish + music = bass](https://graceavery.com/word2vec-fish-music-bass)
-- [A review of BERT based models](https://towardsdatascience.com/a-review-of-bert-based-models-4ffdc0f15d58). July 2019.
-- [Machines Beat Humans on a Reading Test. But Do They Understand?](https://www.quantamagazine.org/machines-beat-humans-on-a-reading-test-but-do-they-understand-20191017)
 - [Universal Sentence Encoder Visually Explained](https://amitness.com/2020/06/universal-sentence-encoder/). June 2020.
+
+### Transformers and Language Models
+
+- [Understanding Large Language Models](https://sebastianraschka.com/blog/2023/llm-reading-list.html). Sebastian Raschka. Feb 2023.
+- [A Primer in BERTology: What we know about how BERT works](https://arxiv.org/pdf/2002.12327.pdf). Nov 2020.
+- [A review of BERT based models](https://towardsdatascience.com/a-review-of-bert-based-models-4ffdc0f15d58). July 2019.
+- [BERT Explained - State of the art language model for NLP](https://towardsdatascience.com/bert-explained-state-of-the-art-language-model-for-nlp-f8b21a9b6270). A great explaination of the fundamentals of how BERT works.
+- [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning)](https://jalammar.github.io/illustrated-bert/). Dec 2018.
+- [Machines Beat Humans on a Reading Test. But Do They Understand?](https://www.quantamagazine.org/machines-beat-humans-on-a-reading-test-but-do-they-understand-20191017)
+- [WHAT EVERY NLP ENGINEER NEEDS TO KNOW ABOUT PRE-TRAINED LANGUAGE MODELS](https://www.topbots.com/ai-nlp-research-pretrained-language-models). 2019.
+- [the transformer … “explained”?](https://nostalgebraist.tumblr.com/post/185326092369/the-transformer-explained)
+- [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+- [Hugging Face's course on Transformer Models](https://huggingface.co/course/chapter1/1)
+- [OpenAI: Better Language Models and Their Implications](https://blog.openai.com/better-language-models/): Pre-trained Transformer-based unsupervised language model that achieves state-of-the-art on many language benchmarks with focus on text generation. Controversial limited release. February 14, 2019.
+
+#### ChatGPT
+
+- [ChatGPT launch blog](https://openai.com/blog/chatgpt/)
+- [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
+
+##### ...in Education
+- [ChatGPT User Experience: Implications for Education](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4312418). Xiaoming Zhai (Unviversity of Georgia). December 2022.
+- [New Modes of Learning Enabled by AI Chatbots: Three Methods and Assignments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4300783) Mollick and Mollick (University of Pennsylvania). December 2022.
+- [Educators Battle Plagiarism As 89% Of Students Admit To Using OpenAI’s ChatGPT For Homework](https://www.forbes.com/sites/chriswestfall/2023/01/28/educators-battle-plagiarism-as-89-of-students-admit-to-using-open-ais-chatgpt-for-homework/?sh=1924574750de). Forbes, January 2023
+- [ChatGPT: Educational friend or foe?](https://www.brookings.edu/blog/education-plus-development/2023/01/09/chatgpt-educational-friend-or-foe/). Hirsh-Pasek and Blinkoff (Temple University). January 2023. 
+- [Don’t Ban ChatGPT in Schools. Teach With It.](https://www.nytimes.com/2023/01/12/technology/chatgpt-schools-teachers.html). New York Times (January 2023). 
+- [ChatGPT and the Future of Business Education](https://knowledge.insead.edu/leadership-organisations/chatgpt-and-future-business-education). Feb 2023.
+- [Udemy course (January 2023). ChatGPT for Teachers in Education.](https://www.udemy.com/course/chatgpt-in-education/)
 
 ### Deep Learning
 - [Keras LSTM tutorial – How to easily build a powerful deep learning language model](http://adventuresinmachinelearning.com/keras-lstm-tutorial/). 
@@ -377,16 +402,13 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
   - A 35-page academic literature review of DL in NLP (University of Colorado, July 2018). Detailed description of neural network architectures followed by a comprehensive set of applications.
 - [Sequence Classification with Human Attention](http://aclweb.org/anthology/K18-1030): Using human attention derived from eye-tracking corpora to regularize attention in recurrent neural networks (RNN). [Implementation code](https://github.com/coastalcph/Sequence_classification_with_human_attention).
 - [Tutorial on Text Classification (NLP) using ULMFiT and fastai Library in Python](https://www.analyticsvidhya.com/blog/2018/11/tutorial-text-classification-ulmfit-fastai-library/)
-- [WHAT EVERY NLP ENGINEER NEEDS TO KNOW ABOUT PRE-TRAINED LANGUAGE MODELS](https://arxiv.org/abs/1901.11504). 2019.
 - [Multi-Task Deep Neural Networks for Natural Language Understanding](https://www.topbots.com/ai-nlp-research-pretrained-language-models). Academic article detailing Microsoft's MTDNN algorithm which has outperformed BERT, ELMo & BiLSTM as of February 2019 in the GLUE Benchmark.
 - [Natural Language Processing Tutorial for Deep Learning Researchers](https://github.com/graykode/nlp-tutorial): A 2019 NLP tutorial repository using TensorFlow and Pytorch.
-- [WHAT EVERY NLP ENGINEER NEEDS TO KNOW ABOUT PRE-TRAINED LANGUAGE MODELS](https://www.topbots.com/ai-nlp-research-pretrained-language-models). 2019.
 - [Deep Learning for Sentiment Analysis : A Survey](https://arxiv.org/abs/1801.07883)
 - [NEURAL READING COMPREHENSION AND BEYOND](https://cs.stanford.edu/~danqi/papers/thesis.pdf) December 2018 Stanford - Reading comprehension models built on top of deep neural networks.
-- [Microsoft: Multi-Task Deep Neural Network (MT-DNN)](https://arxiv.org/pdf/1901.11504): Microsoft's improvement on Google's BERT with focus on natural language understanding. Code to be released. January 31, 2019.
-- [OpenAI: Better Language Models and Their Implications](https://blog.openai.com/better-language-models/): Pre-trained Transformer-based unsupervised language model that achieves state-of-the-art on many language benchmarks with focus on text generation. Controversial limited release. February 14, 2019. 
+- [Microsoft: Multi-Task Deep Neural Network (MT-DNN)](https://arxiv.org/pdf/1901.11504): Microsoft's improvement on Google's BERT with focus on natural language understanding. Code to be released. January 31, 2019. 
 - [A STRUCTURED SELF-ATTENTIVE SENTENCE EMBEDDING](https://arxiv.org/pdf/1703.03130.pdf)
-- [the transformer … “explained”?](https://nostalgebraist.tumblr.com/post/185326092369/the-transformer-explained)
+
 
 ##### Capsule Networks
 - [Investigating Capsule Networks with Dynamic Routing for Text Classification](https://arxiv.org/pdf/1804.00538.pdf). 2018.
@@ -401,10 +423,15 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [WTF is a knowledge graph?](https://hackernoon.com/wtf-is-a-knowledge-graph-a16603a1a25f)
 - [A survey of graphs in natural language processing](https://web.eecs.umich.edu/~mihalcea/papers/nastase.jnle15.pdf). Nastase et al, 2015. 
 
-## NLP Conferences
+## Major NLP Conferences
 
-- [InterSpeech](https://www.isca-speech.org/iscaweb/index.php/conferences/interspeech)
-- [Association for Computational Linguistics (ACL)](http://www.acl2019.org/EN/index.xhtml)
+- [NeurIPS](https://nips.cc/)
+- [Association for Computational Linguistics (ACL)](https://www.aclweb.org/portal/)
+- [Empirical Methods in Natural Language Processing (EMNLP)](https://2022.emnlp.org/)
+- [North American Chapter of the Association for Computational Linguistics (NAACL)](https://2022.naacl.org/)
+- [European Chapter of the Association for Computational Linguistics (EACL)](https://2023.eacl.org/)
+- [International Conference on Computational Linguistics(COLING)](https://coling2022.org/)
+
 
 ## Benchmarks
 
@@ -492,6 +519,7 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
     - [Video: NLTK with Python 3 for Natural Language Processing](https://www.youtube.com/playlist?list=PLQVvvaa0QuDf2JswnfiGkliBInZnIC4HL)
   - [scikit-learn](http://scikit-learn.org/): Machine Learning in Python
      - [Tutorial](http://nbviewer.jupyter.org/gist/rjweiss/7158866)
+  - [Spark NLP](https://nlp.johnsnowlabs.com/): Open source text processing library for Python, Java, and Scala. It provides production-grade, scalable, and trainable versions of the latest research in natural language processing.
   - [spaCy](https://spacy.io/): Industrial-Strength Natural Language Processing in Python.
   - [textblob](https://textblob.readthedocs.io/en/dev/): Simplified Text processing.
     - [Natural Language Basics with TextBlob](http://rwet.decontextualize.com/book/textblob/)
@@ -567,6 +595,7 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [Alchemy API](https://www.ibm.com/watson/alchemy-api.html)
 - [Monkey Learn](http://monkeylearn.com/)
 - [LightTag Annotation Tool](https://lighttag.io). Hosted annotation tool for teams. 
+- [UBIAI](https://ubiai.tools). Easy-to-use text annotation tool for teams with most comprehensive auto-annotation features. Supports NER, relations and document classification as well as OCR annotation for invoice labeling
 - [Anafora](https://github.com/weitechen/anafora): Free and open source web-based raw text annotation tool
 - [brat](http://brat.nlplab.org/): Rapid annotation tool.
 - [Google's Colab](http://colab.research.google.com): Ready-to-go Notebook environment that makes it easy to get up and running.
@@ -574,7 +603,7 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [Ask Data by Tableau Software Inc.](https://www.tableau.com/products/new-features/ask-data#hero-reveal): In February 2019, Tableau released a new NLP feature service add-on to help assist existing Tableau platform users with retrieving quick and easy data visualizations to drive business intelligence insights. Similar to a search engine user interface, Tableau’s Ask Data feature interface applies NLP from user text input to extract key words to find data analytics and business insights quickly on the Tableau Platform.
 - [Dialogflow](https://dialogflow.com/) Google's Natural Language Platform used to integrate conversational user interfaces into mobile apps, web applications, bots, VRUs, etc.
 - [Weka](https://www.cs.waikato.ac.nz/ml/weka/) Easy-to-use, graphical Machine Learning Workbench including NLP capabilities.
-
+- [Annotation Lab](https://www.johnsnowlabs.com/annotation-lab/) - Free End-to-End No-Code platform for text annotation and DL model training/tuning. Out-of-the-box support for Named Entity Recognition, Classification, Relation extraction and Assertion Status Spark NLP models. Unlimited support for users, teams, projects, documents.  
 
 #### Cloud 
 - [Microsoft Azure Text Analytics](https://docs.microsoft.com/en-ca/azure/cognitive-services/text-analytics/overview)
@@ -603,7 +632,6 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 ## Online Demos and Tools
 
 - [MIT OpenNPT for neural machine translation and neural sequence modeling](http://opennmt.net/)
-- [Stemming & Lemmatization with Python NLTK](https://text-processing.com/demo/stem/)
 - [Stanford Parser](http://nlp.stanford.edu:8080/parser/)
 - [Stanford CoreNLP](http://nlp.stanford.edu:8080/corenlp/)
 - [word2vec demo](http://bionlp-www.utu.fi/wv_demo)
@@ -611,9 +639,7 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [sense2vec: Semantic Analysis of the Reddit Hivemind](https://explosion.ai/demos/sense2vec)
 - [RegexPal](https://www.regexpal.com/): Great tool for testing out regular expressions.
 - [AllenNLP Demo](https://demo.allennlp.org): Great demo using AllenNLP of everything from Named Entity Recognition to Textual Entailment.
-- [IBM NLP Demo](https://natural-language-understanding-demo.ng.bluemix.net): Examine a news article or other content from the link for NLP analysis using IBM NLP.
 - [Cognitive Computation Group - Part of Speech Tagging Demo](http://cogcomp.org/page/demos/) These demos exhibit part-of-speech tagging, information extraction tasks etc.
-- [An Open-Source Suite of Language Analyzers](http://nlp.lsi.upc.edu/freeling/demo/demo.php) FreeLing 4.1 - It is an open-source suite of language analyzers.
 
 
 ## Datasets
@@ -658,6 +684,7 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [Awesome Twitter](https://github.com/hridaydutta123/awesome-twitter-tools/blob/master/README.md)
 - [The Big Bad NLP Database](https://quantumstat.com/dataset/dataset.html)
 - [CBC News Coronavirus articles](https://www.kaggle.com/ryanxjhan/cbc-news-coronavirus-articles-march-26)
+- [Huggingface](https://huggingface.co/datasets/viewer/?dataset=financial_phrasebank)
 
 ### Lexicons for Sentiment Analysis
 - [MPQA Lexicon](http://mpqa.cs.pitt.edu/lexicons/)
@@ -680,17 +707,9 @@ Errors in Data](https://journal.r-project.org/archive/2010-2/RJournal_2010-2_Sar
 - [Human Emotion](https://www.youtube.com/watch?v=qwsft6tmvBA&list=PLrAXtmErZgOdP_8GztsuKi9nrraNbKKp4) How to determine confidence level for manually labeled sentiment data?
 - [A Complete Exploratory Data Analysis and Visualization for Text Data](https://towardsdatascience.com/a-complete-exploratory-data-analysis-and-visualization-for-text-data-29fb1b96fb6a)
 
-## Meta
-- [Deep Learning for NLP, advancements and trends in 2017](https://tryolabs.com/blog/2017/12/12/deep-learning-for-nlp-advancements-and-trends-in-2017/?utm_campaign=Data%2BElixir&utm_medium=email&utm_source=Data_Elixir_162)
-- [10 Exciting Ideas of 2018 in NLP](http://ruder.io/10-exciting-ideas-of-2018-in-nlp/)
-- [Semantics and Ontologies - Object Management Group](https://www.omg.org/hot-topics/semantics-ontologies.htm).
-
 ## Other Curated Lists
 - [awesome-nlp](https://github.com/keonkim/awesome-nlp): A curated list of resources dedicated to Natural Language Processing (NLP)
-- [Deep Learning for NLP resources](https://github.com/andrewt3000/dl4nlp): State of the art resources for NLP sequence modeling tasks such as machine translation, image captioning, and dialog.
-- [Speech and Natural Language Processing](https://github.com/edobashira/speech-language-processing)
 - [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#cpp-nlp)
-- [Sentiment140](http://help.sentiment140.com): Allows you to discover the sentiment of a brand, product, or topic on Twitter.
 - [Awesome Deep Learning for Natural Language Processing (NLP)](https://github.com/brianspiering/awesome-dl4nlp)
 - [Paper with Code](https://paperswithcode.com/): A fantastic list of recent machine learning papers on ArXiv, with links to code.   
 - [Chinese NLP Tools](https://datascience.shanghai.nyu.edu/chinese-nlp-tools). 2019. List of tools for NLP in Chinese Language.
